@@ -1,7 +1,10 @@
 PODS:
+  - ActionSheetPicker (0.0.2)
   - AFNetworking (1.2.1)
   - BlocksKit (1.8.2):
     - libffi
+  - KHGravatar (0.0.2):
+    - AFNetworking (~> 1.0)
   - libextobjc/EXTKeyPathCoding (0.2.5):
     - libextobjc/RuntimeExtensions
   - libextobjc/EXTScope (0.2.5):
@@ -16,14 +19,18 @@ PODS:
   - SDWebImage/Core (3.2)
 
 DEPENDENCIES:
+  - ActionSheetPicker (~> 0.0.2)
   - AFNetworking (~> 1.2.1)
   - BlocksKit (~> 1.8.2)
+  - KHGravatar (~> 0.0.2)
   - Mantle (= 1.1)
   - SDWebImage (~> 3.2)
 
 SPEC CHECKSUMS:
+  ActionSheetPicker: 16e212011d5c2e92b3e38609a58b93919b4056aa
   AFNetworking: a44069e3c9c89867544f6639482f155c7e5f9b41
   BlocksKit: 7396526b0816734103f6133fbb1a520c8b04e80c
+  KHGravatar: 8d7dd9faca58c19b2da4dfa3f9bf32cb1d751776
   libextobjc: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
   libffi: d9cf374b6b464c3ea53b13219536fad3bfb06e84
   Mantle: aba2facc6ee8f97512a94768dc57c82b7802948c

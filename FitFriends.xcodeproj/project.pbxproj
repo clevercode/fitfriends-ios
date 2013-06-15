@@ -1,1043 +1,593 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>631A94248F324FED98677F08</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AB0D3F5F09B04D82933709A2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict/>
-		</dict>
-		<key>6330A313889F4815BFF243A1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>930237A76AC845349F8FE5CF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>1</string>
-		</dict>
-		<key>AB0D3F5F09B04D82933709A2</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods.a</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>DBB8E1D8176C200600079FDF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DBB8E1EA176C200700079FDF</string>
-				<string>DBB8E208176C200700079FDF</string>
-				<string>DBB8E1E3176C200600079FDF</string>
-				<string>DBB8E1E2176C200600079FDF</string>
-				<string>6330A313889F4815BFF243A1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E1D9176C200600079FDF</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>CLASSPREFIX</key>
-				<string>FF</string>
-				<key>LastUpgradeCheck</key>
-				<string>0460</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>cleverCode</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>DBB8E1DC176C200600079FDF</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>DBB8E1D8176C200600079FDF</string>
-			<key>productRefGroup</key>
-			<string>DBB8E1E2176C200600079FDF</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>DBB8E1E0176C200600079FDF</string>
-				<string>DBB8E200176C200700079FDF</string>
-			</array>
-		</dict>
-		<key>DBB8E1DC176C200600079FDF</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>DBB8E211176C200700079FDF</string>
-				<string>DBB8E212176C200700079FDF</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>DBB8E1DD176C200600079FDF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DBB8E1F1176C200700079FDF</string>
-				<string>DBB8E1F5176C200700079FDF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>DBB8E1DE176C200600079FDF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DBB8E1E5176C200700079FDF</string>
-				<string>DBB8E1E7176C200700079FDF</string>
-				<string>DBB8E1E9176C200700079FDF</string>
-				<string>631A94248F324FED98677F08</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>DBB8E1DF176C200600079FDF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DBB8E1EF176C200700079FDF</string>
-				<string>DBB8E1F7176C200700079FDF</string>
-				<string>DBB8E1F9176C200700079FDF</string>
-				<string>DBB8E1FB176C200700079FDF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>DBB8E1E0176C200600079FDF</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>DBB8E213176C200700079FDF</string>
-			<key>buildPhases</key>
-			<array>
-				<string>930237A76AC845349F8FE5CF</string>
-				<string>DBB8E1DD176C200600079FDF</string>
-				<string>DBB8E1DE176C200600079FDF</string>
-				<string>DBB8E1DF176C200600079FDF</string>
-				<string>EBBE5AC1359440D1A548F152</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>FitFriends</string>
-			<key>productName</key>
-			<string>FitFriends</string>
-			<key>productReference</key>
-			<string>DBB8E1E1176C200600079FDF</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>DBB8E1E1176C200600079FDF</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>FitFriends.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>DBB8E1E2176C200600079FDF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DBB8E1E1176C200600079FDF</string>
-				<string>DBB8E201176C200700079FDF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E1E3176C200600079FDF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DBB8E1E4176C200700079FDF</string>
-				<string>DBB8E1E6176C200700079FDF</string>
-				<string>DBB8E1E8176C200700079FDF</string>
-				<string>DBB8E202176C200700079FDF</string>
-				<string>AB0D3F5F09B04D82933709A2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E1E4176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>DBB8E1E5176C200700079FDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DBB8E1E4176C200700079FDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DBB8E1E6176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>DBB8E1E7176C200700079FDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DBB8E1E6176C200700079FDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DBB8E1E8176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>DBB8E1E9176C200700079FDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DBB8E1E8176C200700079FDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DBB8E1EA176C200700079FDF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DBB8E1F3176C200700079FDF</string>
-				<string>DBB8E1F4176C200700079FDF</string>
-				<string>DBB8E1EB176C200700079FDF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>FitFriends</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E1EB176C200700079FDF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DBB8E1EC176C200700079FDF</string>
-				<string>DBB8E1ED176C200700079FDF</string>
-				<string>DBB8E1F0176C200700079FDF</string>
-				<string>DBB8E1F2176C200700079FDF</string>
-				<string>DBB8E1F6176C200700079FDF</string>
-				<string>DBB8E1F8176C200700079FDF</string>
-				<string>DBB8E1FA176C200700079FDF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E1EC176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>FitFriends-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E1ED176C200700079FDF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DBB8E1EE176C200700079FDF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E1EE176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E1EF176C200700079FDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DBB8E1ED176C200700079FDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DBB8E1F0176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E1F1176C200700079FDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DBB8E1F0176C200700079FDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DBB8E1F2176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>FitFriends-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E1F3176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>FFAppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E1F4176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>FFAppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E1F5176C200700079FDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DBB8E1F4176C200700079FDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DBB8E1F6176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Default.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E1F7176C200700079FDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DBB8E1F6176C200700079FDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DBB8E1F8176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Default@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E1F9176C200700079FDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DBB8E1F8176C200700079FDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DBB8E1FA176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Default-568h@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E1FB176C200700079FDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DBB8E1FA176C200700079FDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DBB8E1FC176C200700079FDF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DBB8E210176C200700079FDF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>DBB8E1FD176C200700079FDF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DBB8E203176C200700079FDF</string>
-				<string>DBB8E204176C200700079FDF</string>
-				<string>DBB8E205176C200700079FDF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>DBB8E1FE176C200700079FDF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DBB8E20D176C200700079FDF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>DBB8E1FF176C200700079FDF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string># Run the unit tests in this test bundle.
-"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests"
-</string>
-		</dict>
-		<key>DBB8E200176C200700079FDF</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>DBB8E216176C200700079FDF</string>
-			<key>buildPhases</key>
-			<array>
-				<string>DBB8E1FC176C200700079FDF</string>
-				<string>DBB8E1FD176C200700079FDF</string>
-				<string>DBB8E1FE176C200700079FDF</string>
-				<string>DBB8E1FF176C200700079FDF</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>DBB8E207176C200700079FDF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>FitFriendsTests</string>
-			<key>productName</key>
-			<string>FitFriendsTests</string>
-			<key>productReference</key>
-			<string>DBB8E201176C200700079FDF</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle</string>
-		</dict>
-		<key>DBB8E201176C200700079FDF</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>FitFriendsTests.octest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>DBB8E202176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>SenTestingKit.framework</string>
-			<key>path</key>
-			<string>Library/Frameworks/SenTestingKit.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>DBB8E203176C200700079FDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DBB8E202176C200700079FDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DBB8E204176C200700079FDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DBB8E1E4176C200700079FDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DBB8E205176C200700079FDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DBB8E1E6176C200700079FDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DBB8E206176C200700079FDF</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>DBB8E1D9176C200600079FDF</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>DBB8E1E0176C200600079FDF</string>
-			<key>remoteInfo</key>
-			<string>FitFriends</string>
-		</dict>
-		<key>DBB8E207176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>DBB8E1E0176C200600079FDF</string>
-			<key>targetProxy</key>
-			<string>DBB8E206176C200700079FDF</string>
-		</dict>
-		<key>DBB8E208176C200700079FDF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DBB8E20E176C200700079FDF</string>
-				<string>DBB8E20F176C200700079FDF</string>
-				<string>DBB8E209176C200700079FDF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>FitFriendsTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E209176C200700079FDF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DBB8E20A176C200700079FDF</string>
-				<string>DBB8E20B176C200700079FDF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E20A176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>FitFriendsTests-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E20B176C200700079FDF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DBB8E20C176C200700079FDF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E20C176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E20D176C200700079FDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DBB8E20B176C200700079FDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DBB8E20E176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>FitFriendsTests.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E20F176C200700079FDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>FitFriendsTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBB8E210176C200700079FDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DBB8E20F176C200700079FDF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DBB8E211176C200700079FDF</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.1</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>DBB8E212176C200700079FDF</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.1</string>
-				<key>OTHER_CFLAGS</key>
-				<string>-DNS_BLOCK_ASSERTIONS=1</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>DBB8E213176C200700079FDF</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>DBB8E214176C200700079FDF</string>
-				<string>DBB8E215176C200700079FDF</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>DBB8E214176C200700079FDF</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>6330A313889F4815BFF243A1</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>FitFriends/FitFriends-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>FitFriends/FitFriends-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>DBB8E215176C200700079FDF</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>6330A313889F4815BFF243A1</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>FitFriends/FitFriends-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>FitFriends/FitFriends-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>DBB8E216176C200700079FDF</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>DBB8E217176C200700079FDF</string>
-				<string>DBB8E218176C200700079FDF</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>DBB8E217176C200700079FDF</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/FitFriends.app/FitFriends</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>"$(SDKROOT)/Developer/Library/Frameworks"</string>
-					<string>"$(DEVELOPER_LIBRARY_DIR)/Frameworks"</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>FitFriends/FitFriends-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>FitFriendsTests/FitFriendsTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>octest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>DBB8E218176C200700079FDF</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/FitFriends.app/FitFriends</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>"$(SDKROOT)/Developer/Library/Frameworks"</string>
-					<string>"$(DEVELOPER_LIBRARY_DIR)/Frameworks"</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>FitFriends/FitFriends-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>FitFriendsTests/FitFriendsTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>octest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>EBBE5AC1359440D1A548F152</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>1</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>DBB8E1D9176C200600079FDF</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		631A94248F324FED98677F08 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0D3F5F09B04D82933709A2 /* libPods.a */; };
+		DBB8E1E5176C200700079FDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB8E1E4176C200700079FDF /* UIKit.framework */; };
+		DBB8E1E7176C200700079FDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB8E1E6176C200700079FDF /* Foundation.framework */; };
+		DBB8E1E9176C200700079FDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB8E1E8176C200700079FDF /* CoreGraphics.framework */; };
+		DBB8E1EF176C200700079FDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E1ED176C200700079FDF /* InfoPlist.strings */; };
+		DBB8E1F1176C200700079FDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB8E1F0176C200700079FDF /* main.m */; };
+		DBB8E1F5176C200700079FDF /* FFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB8E1F4176C200700079FDF /* FFAppDelegate.m */; };
+		DBB8E1F7176C200700079FDF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E1F6176C200700079FDF /* Default.png */; };
+		DBB8E1F9176C200700079FDF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E1F8176C200700079FDF /* Default@2x.png */; };
+		DBB8E1FB176C200700079FDF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E1FA176C200700079FDF /* Default-568h@2x.png */; };
+		DBB8E203176C200700079FDF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB8E202176C200700079FDF /* SenTestingKit.framework */; };
+		DBB8E204176C200700079FDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB8E1E4176C200700079FDF /* UIKit.framework */; };
+		DBB8E205176C200700079FDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB8E1E6176C200700079FDF /* Foundation.framework */; };
+		DBB8E20D176C200700079FDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E20B176C200700079FDF /* InfoPlist.strings */; };
+		DBB8E210176C200700079FDF /* FitFriendsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB8E20F176C200700079FDF /* FitFriendsTests.m */; };
+		DBB8E222176C271300079FDF /* FFLeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB8E221176C271300079FDF /* FFLeaderboardViewController.m */; };
+		DBB8E225176C28F500079FDF /* FFUserStatsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB8E224176C28F500079FDF /* FFUserStatsCell.m */; };
+		DBB8E231176C396000079FDF /* bread.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E22B176C396000079FDF /* bread.png */; };
+		DBB8E232176C396000079FDF /* bread@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E22C176C396000079FDF /* bread@2x.png */; };
+		DBB8E233176C396000079FDF /* water.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E22D176C396000079FDF /* water.png */; };
+		DBB8E234176C396000079FDF /* water@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E22E176C396000079FDF /* water@2x.png */; };
+		DBB8E235176C396000079FDF /* scale.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E22F176C396000079FDF /* scale.png */; };
+		DBB8E236176C396000079FDF /* scale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E230176C396000079FDF /* scale@2x.png */; };
+		DBB8E238176C4F7F00079FDF /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E237176C4F7F00079FDF /* Icon-57.png */; };
+		DBB8E23A176C4F8400079FDF /* Icon-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E239176C4F8400079FDF /* Icon-57@2x.png */; };
+		DBB8E23F176C513D00079FDF /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E23D176C513D00079FDF /* calendar.png */; };
+		DBB8E240176C513D00079FDF /* calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E23E176C513D00079FDF /* calendar@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DBB8E206176C200700079FDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBB8E1D9176C200600079FDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBB8E1E0176C200600079FDF;
+			remoteInfo = FitFriends;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6330A313889F4815BFF243A1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		AB0D3F5F09B04D82933709A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBB8E1E1176C200600079FDF /* FitFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBB8E1E4176C200700079FDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DBB8E1E6176C200700079FDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DBB8E1E8176C200700079FDF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DBB8E1EC176C200700079FDF /* FitFriends-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FitFriends-Info.plist"; sourceTree = "<group>"; };
+		DBB8E1EE176C200700079FDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DBB8E1F0176C200700079FDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBB8E1F2176C200700079FDF /* FitFriends-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitFriends-Prefix.pch"; sourceTree = "<group>"; };
+		DBB8E1F3176C200700079FDF /* FFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFAppDelegate.h; sourceTree = "<group>"; };
+		DBB8E1F4176C200700079FDF /* FFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFAppDelegate.m; sourceTree = "<group>"; };
+		DBB8E1F6176C200700079FDF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DBB8E1F8176C200700079FDF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DBB8E1FA176C200700079FDF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DBB8E201176C200700079FDF /* FitFriendsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitFriendsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBB8E202176C200700079FDF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DBB8E20A176C200700079FDF /* FitFriendsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FitFriendsTests-Info.plist"; sourceTree = "<group>"; };
+		DBB8E20C176C200700079FDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DBB8E20E176C200700079FDF /* FitFriendsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitFriendsTests.h; sourceTree = "<group>"; };
+		DBB8E20F176C200700079FDF /* FitFriendsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FitFriendsTests.m; sourceTree = "<group>"; };
+		DBB8E220176C271300079FDF /* FFLeaderboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFLeaderboardViewController.h; sourceTree = "<group>"; };
+		DBB8E221176C271300079FDF /* FFLeaderboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFLeaderboardViewController.m; sourceTree = "<group>"; };
+		DBB8E223176C28F500079FDF /* FFUserStatsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUserStatsCell.h; sourceTree = "<group>"; };
+		DBB8E224176C28F500079FDF /* FFUserStatsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUserStatsCell.m; sourceTree = "<group>"; };
+		DBB8E22B176C396000079FDF /* bread.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bread.png; sourceTree = "<group>"; };
+		DBB8E22C176C396000079FDF /* bread@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bread@2x.png"; sourceTree = "<group>"; };
+		DBB8E22D176C396000079FDF /* water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water.png; sourceTree = "<group>"; };
+		DBB8E22E176C396000079FDF /* water@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "water@2x.png"; sourceTree = "<group>"; };
+		DBB8E22F176C396000079FDF /* scale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scale.png; sourceTree = "<group>"; };
+		DBB8E230176C396000079FDF /* scale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scale@2x.png"; sourceTree = "<group>"; };
+		DBB8E237176C4F7F00079FDF /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
+		DBB8E239176C4F8400079FDF /* Icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x.png"; sourceTree = "<group>"; };
+		DBB8E23D176C513D00079FDF /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		DBB8E23E176C513D00079FDF /* calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBB8E1DE176C200600079FDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBB8E1E5176C200700079FDF /* UIKit.framework in Frameworks */,
+				DBB8E1E7176C200700079FDF /* Foundation.framework in Frameworks */,
+				DBB8E1E9176C200700079FDF /* CoreGraphics.framework in Frameworks */,
+				631A94248F324FED98677F08 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBB8E1FD176C200700079FDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBB8E203176C200700079FDF /* SenTestingKit.framework in Frameworks */,
+				DBB8E204176C200700079FDF /* UIKit.framework in Frameworks */,
+				DBB8E205176C200700079FDF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DBB8E1D8176C200600079FDF = {
+			isa = PBXGroup;
+			children = (
+				DBB8E1EA176C200700079FDF /* FitFriends */,
+				DBB8E208176C200700079FDF /* FitFriendsTests */,
+				DBB8E1E3176C200600079FDF /* Frameworks */,
+				DBB8E1E2176C200600079FDF /* Products */,
+				6330A313889F4815BFF243A1 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		DBB8E1E2176C200600079FDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8E1E1176C200600079FDF /* FitFriends.app */,
+				DBB8E201176C200700079FDF /* FitFriendsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBB8E1E3176C200600079FDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8E1E4176C200700079FDF /* UIKit.framework */,
+				DBB8E1E6176C200700079FDF /* Foundation.framework */,
+				DBB8E1E8176C200700079FDF /* CoreGraphics.framework */,
+				DBB8E202176C200700079FDF /* SenTestingKit.framework */,
+				AB0D3F5F09B04D82933709A2 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBB8E1EA176C200700079FDF /* FitFriends */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8E21C176C269400079FDF /* App */,
+				DBB8E229176C396000079FDF /* Resources */,
+				DBB8E1F3176C200700079FDF /* FFAppDelegate.h */,
+				DBB8E1F4176C200700079FDF /* FFAppDelegate.m */,
+				DBB8E1EB176C200700079FDF /* Supporting Files */,
+			);
+			path = FitFriends;
+			sourceTree = "<group>";
+		};
+		DBB8E1EB176C200700079FDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8E1EC176C200700079FDF /* FitFriends-Info.plist */,
+				DBB8E1ED176C200700079FDF /* InfoPlist.strings */,
+				DBB8E1F0176C200700079FDF /* main.m */,
+				DBB8E1F2176C200700079FDF /* FitFriends-Prefix.pch */,
+				DBB8E237176C4F7F00079FDF /* Icon-57.png */,
+				DBB8E239176C4F8400079FDF /* Icon-57@2x.png */,
+				DBB8E1F6176C200700079FDF /* Default.png */,
+				DBB8E1F8176C200700079FDF /* Default@2x.png */,
+				DBB8E1FA176C200700079FDF /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBB8E208176C200700079FDF /* FitFriendsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8E20E176C200700079FDF /* FitFriendsTests.h */,
+				DBB8E20F176C200700079FDF /* FitFriendsTests.m */,
+				DBB8E209176C200700079FDF /* Supporting Files */,
+			);
+			path = FitFriendsTests;
+			sourceTree = "<group>";
+		};
+		DBB8E209176C200700079FDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8E20A176C200700079FDF /* FitFriendsTests-Info.plist */,
+				DBB8E20B176C200700079FDF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBB8E21C176C269400079FDF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8E21D176C269400079FDF /* Controllers */,
+				DBB8E21E176C269400079FDF /* Models */,
+				DBB8E21F176C269400079FDF /* Views */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DBB8E21D176C269400079FDF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8E220176C271300079FDF /* FFLeaderboardViewController.h */,
+				DBB8E221176C271300079FDF /* FFLeaderboardViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DBB8E21E176C269400079FDF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DBB8E21F176C269400079FDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8E223176C28F500079FDF /* FFUserStatsCell.h */,
+				DBB8E224176C28F500079FDF /* FFUserStatsCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DBB8E229176C396000079FDF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8E22A176C396000079FDF /* Icons */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DBB8E22A176C396000079FDF /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8E23D176C513D00079FDF /* calendar.png */,
+				DBB8E23E176C513D00079FDF /* calendar@2x.png */,
+				DBB8E22B176C396000079FDF /* bread.png */,
+				DBB8E22C176C396000079FDF /* bread@2x.png */,
+				DBB8E22D176C396000079FDF /* water.png */,
+				DBB8E22E176C396000079FDF /* water@2x.png */,
+				DBB8E22F176C396000079FDF /* scale.png */,
+				DBB8E230176C396000079FDF /* scale@2x.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBB8E1E0176C200600079FDF /* FitFriends */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBB8E213176C200700079FDF /* Build configuration list for PBXNativeTarget "FitFriends" */;
+			buildPhases = (
+				930237A76AC845349F8FE5CF /* Check Pods Manifest.lock */,
+				DBB8E1DD176C200600079FDF /* Sources */,
+				DBB8E1DE176C200600079FDF /* Frameworks */,
+				DBB8E1DF176C200600079FDF /* Resources */,
+				EBBE5AC1359440D1A548F152 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitFriends;
+			productName = FitFriends;
+			productReference = DBB8E1E1176C200600079FDF /* FitFriends.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DBB8E200176C200700079FDF /* FitFriendsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBB8E216176C200700079FDF /* Build configuration list for PBXNativeTarget "FitFriendsTests" */;
+			buildPhases = (
+				DBB8E1FC176C200700079FDF /* Sources */,
+				DBB8E1FD176C200700079FDF /* Frameworks */,
+				DBB8E1FE176C200700079FDF /* Resources */,
+				DBB8E1FF176C200700079FDF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBB8E207176C200700079FDF /* PBXTargetDependency */,
+			);
+			name = FitFriendsTests;
+			productName = FitFriendsTests;
+			productReference = DBB8E201176C200700079FDF /* FitFriendsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBB8E1D9176C200600079FDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FF;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = cleverCode;
+			};
+			buildConfigurationList = DBB8E1DC176C200600079FDF /* Build configuration list for PBXProject "FitFriends" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DBB8E1D8176C200600079FDF;
+			productRefGroup = DBB8E1E2176C200600079FDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBB8E1E0176C200600079FDF /* FitFriends */,
+				DBB8E200176C200700079FDF /* FitFriendsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBB8E1DF176C200600079FDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBB8E1EF176C200700079FDF /* InfoPlist.strings in Resources */,
+				DBB8E1F7176C200700079FDF /* Default.png in Resources */,
+				DBB8E1F9176C200700079FDF /* Default@2x.png in Resources */,
+				DBB8E1FB176C200700079FDF /* Default-568h@2x.png in Resources */,
+				DBB8E231176C396000079FDF /* bread.png in Resources */,
+				DBB8E232176C396000079FDF /* bread@2x.png in Resources */,
+				DBB8E233176C396000079FDF /* water.png in Resources */,
+				DBB8E234176C396000079FDF /* water@2x.png in Resources */,
+				DBB8E235176C396000079FDF /* scale.png in Resources */,
+				DBB8E236176C396000079FDF /* scale@2x.png in Resources */,
+				DBB8E238176C4F7F00079FDF /* Icon-57.png in Resources */,
+				DBB8E23A176C4F8400079FDF /* Icon-57@2x.png in Resources */,
+				DBB8E23F176C513D00079FDF /* calendar.png in Resources */,
+				DBB8E240176C513D00079FDF /* calendar@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBB8E1FE176C200700079FDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBB8E20D176C200700079FDF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		930237A76AC845349F8FE5CF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		DBB8E1FF176C200700079FDF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		EBBE5AC1359440D1A548F152 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBB8E1DD176C200600079FDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBB8E1F1176C200700079FDF /* main.m in Sources */,
+				DBB8E1F5176C200700079FDF /* FFAppDelegate.m in Sources */,
+				DBB8E222176C271300079FDF /* FFLeaderboardViewController.m in Sources */,
+				DBB8E225176C28F500079FDF /* FFUserStatsCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBB8E1FC176C200700079FDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBB8E210176C200700079FDF /* FitFriendsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBB8E207176C200700079FDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBB8E1E0176C200600079FDF /* FitFriends */;
+			targetProxy = DBB8E206176C200700079FDF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DBB8E1ED176C200700079FDF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBB8E1EE176C200700079FDF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DBB8E20B176C200700079FDF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBB8E20C176C200700079FDF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBB8E211176C200700079FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBB8E212176C200700079FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBB8E214176C200700079FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6330A313889F4815BFF243A1 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FitFriends/FitFriends-Prefix.pch";
+				INFOPLIST_FILE = "FitFriends/FitFriends-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DBB8E215176C200700079FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6330A313889F4815BFF243A1 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FitFriends/FitFriends-Prefix.pch";
+				INFOPLIST_FILE = "FitFriends/FitFriends-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DBB8E217176C200700079FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FitFriends.app/FitFriends";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FitFriends/FitFriends-Prefix.pch";
+				INFOPLIST_FILE = "FitFriendsTests/FitFriendsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DBB8E218176C200700079FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FitFriends.app/FitFriends";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FitFriends/FitFriends-Prefix.pch";
+				INFOPLIST_FILE = "FitFriendsTests/FitFriendsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBB8E1DC176C200600079FDF /* Build configuration list for PBXProject "FitFriends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBB8E211176C200700079FDF /* Debug */,
+				DBB8E212176C200700079FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBB8E213176C200700079FDF /* Build configuration list for PBXNativeTarget "FitFriends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBB8E214176C200700079FDF /* Debug */,
+				DBB8E215176C200700079FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBB8E216176C200700079FDF /* Build configuration list for PBXNativeTarget "FitFriendsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBB8E217176C200700079FDF /* Debug */,
+				DBB8E218176C200700079FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DBB8E1D9176C200600079FDF /* Project object */;
+}
