@@ -1,0 +1,32 @@
+PODS:
+  - AFNetworking (1.2.1)
+  - BlocksKit (1.8.2):
+    - libffi
+  - libextobjc/EXTKeyPathCoding (0.2.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTScope (0.2.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.2.5)
+  - libffi (3.0.13)
+  - Mantle (1.1):
+    - libextobjc/EXTKeyPathCoding
+    - libextobjc/EXTScope
+  - SDWebImage (3.2):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.2)
+
+DEPENDENCIES:
+  - AFNetworking (~> 1.2.1)
+  - BlocksKit (~> 1.8.2)
+  - Mantle (= 1.1)
+  - SDWebImage (~> 3.2)
+
+SPEC CHECKSUMS:
+  AFNetworking: a44069e3c9c89867544f6639482f155c7e5f9b41
+  BlocksKit: 7396526b0816734103f6133fbb1a520c8b04e80c
+  libextobjc: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
+  libffi: d9cf374b6b464c3ea53b13219536fad3bfb06e84
+  Mantle: aba2facc6ee8f97512a94768dc57c82b7802948c
+  SDWebImage: f742ac91b65bd34b6d452325115e2ded3a73380e
+
+COCOAPODS: 0.20.2

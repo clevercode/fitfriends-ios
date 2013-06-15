@@ -1,0 +1,6 @@
+xcodeproj 'FitFriends.xcodeproj'
+platform :ios, '6.0'
+pod 'Mantle', '1.1'
+pod 'SDWebImage', '~> 3.2'
+pod 'AFNetworking', '~> 1.2.1'
+pod 'BlocksKit', '~> 1.8.2'
