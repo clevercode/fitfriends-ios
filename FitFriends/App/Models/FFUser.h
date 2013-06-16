@@ -16,5 +16,8 @@
 @property(nonatomic, copy, readonly) NSDecimalNumber *goalWeight;
 @property(nonatomic, copy, readonly) NSDecimalNumber *currentWeight;
 @property(nonatomic, assign, readonly) NSUInteger height;
+@property(nonatomic, copy, readonly) NSDecimalNumber *percentLost;
+@property(nonatomic, copy, readonly) NSDecimalNumber *todaysCarbs;
+@property(nonatomic, assign, readonly) NSUInteger todaysWater;
 
 @end

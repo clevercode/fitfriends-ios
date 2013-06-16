@@ -117,9 +117,9 @@ static NSString * const CellIdentifier = @"UserStatsCell";
                                                                                forIndexPath:indexPath];
     FFUser *user = _friends[indexPath.row];
     [cell setAvatarWithEmail:user.email];
-    cell.water = @"100";
-    cell.carbs = @"19";
-    cell.weight = @"-4%";
+    cell.water = [NSString stringWithFormat:@"%d", user.todaysWater];
+    cell.carbs = [NSString stringWithFormat:@"%@", user.todaysCarbs];
+    cell.weight = [NSString stringWithFormat:@"%@%%", user.percentLost];
 
     return cell;
 }

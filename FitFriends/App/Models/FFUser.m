@@ -16,7 +16,10 @@
     return @{
         @"startWeight": @"start_weight",
         @"goalWeight": @"goal_weight",
-        @"currentWeight": @"current_weight"
+        @"currentWeight": @"current_weight",
+        @"todaysCarbs": @"todays_carbs",
+        @"todaysWater": @"todays_water",
+        @"percentLost": @"percentage_lost"
     };
 }
 
@@ -34,5 +37,16 @@
 {
     return [NSValueTransformer valueTransformerForName:FFNSDecimalNumberValueTransformerName];
 }
+
++ (NSValueTransformer *)percentLostJSONTransformer
+{
+    return [NSValueTransformer valueTransformerForName:FFNSDecimalNumberValueTransformerName];
+}
+
++ (NSValueTransformer *)todaysCarbsJSONTransformer
+{
+    return [NSValueTransformer valueTransformerForName:FFNSDecimalNumberValueTransformerName];
+}
+
 
 @end
