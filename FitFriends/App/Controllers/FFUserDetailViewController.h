@@ -1,5 +1,5 @@
 //
-//  FFLeaderboardViewController.h
+//  FFUserDetailViewController.h
 //  FitFriends
 //
 //  Created by Andrew Smith on 2013-06-15.
@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FFUser.h"
 
-@interface FFLeaderboardViewController : UITableViewController
+@interface FFUserDetailViewController : UIViewController
+
+@property(nonatomic, strong) FFUser *user;
 
 @end

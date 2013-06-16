@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		631A94248F324FED98677F08 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0D3F5F09B04D82933709A2 /* libPods.a */; };
+		DB5C0FC3176D1E8000ED3D29 /* FFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C0FC2176D1E8000ED3D29 /* FFUser.m */; };
+		DB5C0FC6176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C0FC5176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.m */; };
+		DB5C0FC9176D2E8600ED3D29 /* FFUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C0FC8176D2E8600ED3D29 /* FFUserDetailViewController.m */; };
 		DBB8E1E5176C200700079FDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB8E1E4176C200700079FDF /* UIKit.framework */; };
 		DBB8E1E7176C200700079FDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB8E1E6176C200700079FDF /* Foundation.framework */; };
 		DBB8E1E9176C200700079FDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB8E1E8176C200700079FDF /* CoreGraphics.framework */; };
@@ -34,6 +37,7 @@
 		DBB8E23A176C4F8400079FDF /* Icon-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E239176C4F8400079FDF /* Icon-57@2x.png */; };
 		DBB8E23F176C513D00079FDF /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E23D176C513D00079FDF /* calendar.png */; };
 		DBB8E240176C513D00079FDF /* calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E23E176C513D00079FDF /* calendar@2x.png */; };
+		DBC839A1176D1B7800904DDE /* FFAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC839A0176D1B7800904DDE /* FFAPIClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,12 @@
 /* Begin PBXFileReference section */
 		6330A313889F4815BFF243A1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		AB0D3F5F09B04D82933709A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB5C0FC1176D1E8000ED3D29 /* FFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUser.h; sourceTree = "<group>"; };
+		DB5C0FC2176D1E8000ED3D29 /* FFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUser.m; sourceTree = "<group>"; };
+		DB5C0FC4176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNSDecimalNumberValueTransformer.h; sourceTree = "<group>"; };
+		DB5C0FC5176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNSDecimalNumberValueTransformer.m; sourceTree = "<group>"; };
+		DB5C0FC7176D2E8600ED3D29 /* FFUserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUserDetailViewController.h; sourceTree = "<group>"; };
+		DB5C0FC8176D2E8600ED3D29 /* FFUserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUserDetailViewController.m; sourceTree = "<group>"; };
 		DBB8E1E1176C200600079FDF /* FitFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB8E1E4176C200700079FDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DBB8E1E6176C200700079FDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -82,6 +92,8 @@
 		DBB8E239176C4F8400079FDF /* Icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x.png"; sourceTree = "<group>"; };
 		DBB8E23D176C513D00079FDF /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
 		DBB8E23E176C513D00079FDF /* calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar@2x.png"; sourceTree = "<group>"; };
+		DBC8399F176D1B7800904DDE /* FFAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAPIClient.h; sourceTree = "<group>"; };
+		DBC839A0176D1B7800904DDE /* FFAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAPIClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +215,8 @@
 			children = (
 				DBB8E220176C271300079FDF /* FFLeaderboardViewController.h */,
 				DBB8E221176C271300079FDF /* FFLeaderboardViewController.m */,
+				DB5C0FC7176D2E8600ED3D29 /* FFUserDetailViewController.h */,
+				DB5C0FC8176D2E8600ED3D29 /* FFUserDetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -210,6 +224,12 @@
 		DBB8E21E176C269400079FDF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DBC8399F176D1B7800904DDE /* FFAPIClient.h */,
+				DBC839A0176D1B7800904DDE /* FFAPIClient.m */,
+				DB5C0FC1176D1E8000ED3D29 /* FFUser.h */,
+				DB5C0FC2176D1E8000ED3D29 /* FFUser.m */,
+				DB5C0FC4176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.h */,
+				DB5C0FC5176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -400,6 +420,10 @@
 				DBB8E1F5176C200700079FDF /* FFAppDelegate.m in Sources */,
 				DBB8E222176C271300079FDF /* FFLeaderboardViewController.m in Sources */,
 				DBB8E225176C28F500079FDF /* FFUserStatsCell.m in Sources */,
+				DBC839A1176D1B7800904DDE /* FFAPIClient.m in Sources */,
+				DB5C0FC3176D1E8000ED3D29 /* FFUser.m in Sources */,
+				DB5C0FC6176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.m in Sources */,
+				DB5C0FC9176D2E8600ED3D29 /* FFUserDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

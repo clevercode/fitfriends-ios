@@ -8,6 +8,11 @@
 
 #import "FFLeaderboardViewController.h"
 #import "FFUserStatsCell.h"
+#import "FFUser.h"
+#import "FFAPIClient.h"
+#import "FFUserDetailViewController.h"
+
+#import <BlocksKit/NSArray+BlocksKit.h>
 #import <ActionSheetPicker/ActionSheetDatePicker.h>
 
 static NSString * const CellIdentifier = @"UserStatsCell";
@@ -27,69 +32,59 @@ static NSString * const CellIdentifier = @"UserStatsCell";
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.friends = @[@"fullsailor@me.com", @"mail@zdn.me", @"mail@alyssanicoll.com"];
+        self.friends = @[];
+        self.title = @"Fit Friends";
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose
+                                                                                               target:self
+                                                                                               action:@selector(onAddAction:)];
+
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"calendar"]
+                                                                                 style:UIBarButtonItemStyleBordered
+                                                                                target:self
+                                                                                action:@selector(onSelectDateAction:)];
     }
     return self;
-}
-
-- (void)loadView
-{
-    UIView *view = [[UIView alloc] init];
-
-    UINavigationBar *navigationBar = [[UINavigationBar alloc] init];
-    navigationBar.translatesAutoresizingMaskIntoConstraints = NO;
-    navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont fontWithName:@"Avenir-Black"
-                                                                               size:20.f]};
-    navigationBar.tintColor = [UIColor colorWithRed:0.8f green:0.067f blue:0.f alpha:1.f];
-    [view addSubview:navigationBar];
-
-    UINavigationItem *navigationItem = [[UINavigationItem alloc] init];
-    navigationItem.title = @"Fit Friends";
-    navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose
-                                                                                      target:self
-                                                                                      action:@selector(onAddAction:)];
-
-    navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"calendar"]
-                                                                        style:UIBarButtonItemStyleBordered
-                                                                       target:self
-                                                                       action:@selector(onSelectDateAction:)];
-
-    [navigationBar setItems:@[navigationItem]];
-    self.navigationBar = navigationBar;
-
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-    tableView.translatesAutoresizingMaskIntoConstraints = NO;
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    tableView.allowsSelection = NO;
-    tableView.rowHeight = 90.f;
-    [view addSubview:tableView];
-    self.tableView = tableView;
-
-    NSDictionary *views = NSDictionaryOfVariableBindings(navigationBar,
-                                                         tableView);
-
-    [view addConstraints:
-     [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[navigationBar]|"
-                                             options:kNilOptions
-                                             metrics:nil
-                                               views:views]];
-    [view addConstraints:
-     [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[navigationBar][tableView]|"
-                                             options:NSLayoutFormatAlignAllLeft|NSLayoutFormatAlignAllRight
-                                             metrics:nil
-                                               views:views]];
-
-
-    self.view = view;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [_tableView registerClass:[FFUserStatsCell class]
-       forCellReuseIdentifier:CellIdentifier];
+    self.tableView.rowHeight = 90.f;
+    [self.tableView registerClass:[FFUserStatsCell class]
+           forCellReuseIdentifier:CellIdentifier];
 	// Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if ([_friends count] == 0)
+    {
+        [self loadData];
+    }
+}
+
+#pragma mark -
+
+- (void)loadData
+{
+    [[FFAPIClient sharedClient] getPath:@"users"
+                             parameters:nil
+                                success:^(AFHTTPRequestOperation *operation, NSArray *users) {
+                                    self.friends = [users map:^id(NSDictionary *json) {
+                                        return [MTLJSONAdapter modelOfClass:[FFUser class]
+                                                         fromJSONDictionary:json
+                                                                      error:NULL];
+                                    }];
+                                    [self.tableView reloadData];
+                                } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"API Error"
+                                                                                    message:error.userInfo[NSLocalizedDescriptionKey]
+                                                                                   delegate:nil
+                                                                          cancelButtonTitle:nil
+                                                                          otherButtonTitles:nil];
+                                    [alert show];
+                                }];
 }
 
 #pragma mark - Actions
@@ -120,7 +115,8 @@ static NSString * const CellIdentifier = @"UserStatsCell";
 {
     FFUserStatsCell *cell = (FFUserStatsCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier
                                                                                forIndexPath:indexPath];
-    [cell setAvatarWithEmail:_friends[indexPath.row]];
+    FFUser *user = _friends[indexPath.row];
+    [cell setAvatarWithEmail:user.email];
     cell.water = @"100";
     cell.carbs = @"19";
     cell.weight = @"-4%";
@@ -136,7 +132,16 @@ static NSString * const CellIdentifier = @"UserStatsCell";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [_friends count];
-    
+}
+
+#pragma mark - UITableViewDelegate protocol methods
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    FFUser *user = _friends[indexPath.row];
+    FFUserDetailViewController *detailViewController = [[FFUserDetailViewController alloc] init];
+    detailViewController.user = user;
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end

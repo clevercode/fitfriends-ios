@@ -8,15 +8,27 @@
 
 #import "FFAppDelegate.h"
 #import "FFLeaderboardViewController.h"
+#import <HockeySDK/HockeySDK.h>
 
 @implementation FFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Hockey App
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"cbf0dffd40de624ae36e9e77e70006b5"
+                                                           delegate:self];
+    [[BITHockeyManager sharedHockeyManager] startManager];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[FFLeaderboardViewController alloc] init];
+
+    FFLeaderboardViewController *rootViewController = [[FFLeaderboardViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont fontWithName:@"Avenir-Black"
+                                                                               size:20.f]};
+    navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.8f green:0.067f blue:0.f alpha:1.f];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }
