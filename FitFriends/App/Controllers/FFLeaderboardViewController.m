@@ -11,6 +11,7 @@
 #import "FFUser.h"
 #import "FFAPIClient.h"
 #import "FFUserDetailViewController.h"
+#import "FFNewLogViewController.h"
 
 #import <BlocksKit/NSArray+BlocksKit.h>
 #import <ActionSheetPicker/ActionSheetDatePicker.h>
@@ -91,7 +92,11 @@ static NSString * const CellIdentifier = @"UserStatsCell";
 
 - (void)onAddAction:(id)sender
 {
-    
+    FFNewLogViewController *newLogViewController = [[FFNewLogViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:newLogViewController];
+    [self presentViewController:navigationController
+                       animated:YES
+                     completion:nil];
 }
 
 - (void)onSelectDateAction:(id)sender

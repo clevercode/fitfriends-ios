@@ -18,6 +18,7 @@ PODS:
   - SDWebImage (3.2):
     - SDWebImage/Core
   - SDWebImage/Core (3.2)
+  - UIView-Autolayout (0.0.2)
 
 DEPENDENCIES:
   - ActionSheetPicker (~> 0.0.2)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - KHGravatar (~> 0.0.2)
   - Mantle (= 1.1)
   - SDWebImage (~> 3.2)
+  - UIView-Autolayout (~> 0.0.2)
 
 SPEC CHECKSUMS:
   ActionSheetPicker: 16e212011d5c2e92b3e38609a58b93919b4056aa
@@ -38,5 +40,6 @@ SPEC CHECKSUMS:
   libffi: d9cf374b6b464c3ea53b13219536fad3bfb06e84
   Mantle: aba2facc6ee8f97512a94768dc57c82b7802948c
   SDWebImage: f742ac91b65bd34b6d452325115e2ded3a73380e
+  UIView-Autolayout: 3b6b8b59856b16b0d74ca1affdecc81f0e9a58c2
 
 COCOAPODS: 0.20.2

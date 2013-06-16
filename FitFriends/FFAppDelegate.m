@@ -25,9 +25,11 @@
 
     FFLeaderboardViewController *rootViewController = [[FFLeaderboardViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
-    navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont fontWithName:@"Avenir-Black"
-                                                                               size:20.f]};
-    navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.8f green:0.067f blue:0.f alpha:1.f];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeFont: [UIFont fontWithName:@"Avenir-Black"
+                                                                                                       size:20.f]}];
+    UIColor *brandRed = [UIColor colorWithRed:0.8f green:0.067f blue:0.f alpha:1.f];
+    [[UINavigationBar appearance] setTintColor:brandRed];
+    [[UISegmentedControl appearance] setTintColor:brandRed];
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;

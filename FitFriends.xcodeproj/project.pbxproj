@@ -11,6 +11,10 @@
 		DB5C0FC3176D1E8000ED3D29 /* FFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C0FC2176D1E8000ED3D29 /* FFUser.m */; };
 		DB5C0FC6176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C0FC5176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.m */; };
 		DB5C0FC9176D2E8600ED3D29 /* FFUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C0FC8176D2E8600ED3D29 /* FFUserDetailViewController.m */; };
+		DB5C0FCC176E2DAE00ED3D29 /* FFNewLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C0FCB176E2DAE00ED3D29 /* FFNewLogViewController.m */; };
+		DB5C0FCE176E42F700ED3D29 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5C0FCD176E42F700ED3D29 /* QuartzCore.framework */; };
+		DB5C0FD1176E43D600ED3D29 /* FFFormFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C0FD0176E43D600ED3D29 /* FFFormFieldView.m */; };
+		DB5C0FD4176E65A400ED3D29 /* FFFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C0FD3176E65A400ED3D29 /* FFFormView.m */; };
 		DBB8E1E5176C200700079FDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB8E1E4176C200700079FDF /* UIKit.framework */; };
 		DBB8E1E7176C200700079FDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB8E1E6176C200700079FDF /* Foundation.framework */; };
 		DBB8E1E9176C200700079FDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB8E1E8176C200700079FDF /* CoreGraphics.framework */; };
@@ -59,6 +63,13 @@
 		DB5C0FC5176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNSDecimalNumberValueTransformer.m; sourceTree = "<group>"; };
 		DB5C0FC7176D2E8600ED3D29 /* FFUserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUserDetailViewController.h; sourceTree = "<group>"; };
 		DB5C0FC8176D2E8600ED3D29 /* FFUserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUserDetailViewController.m; sourceTree = "<group>"; };
+		DB5C0FCA176E2DAE00ED3D29 /* FFNewLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNewLogViewController.h; sourceTree = "<group>"; };
+		DB5C0FCB176E2DAE00ED3D29 /* FFNewLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNewLogViewController.m; sourceTree = "<group>"; };
+		DB5C0FCD176E42F700ED3D29 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DB5C0FCF176E43D600ED3D29 /* FFFormFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFFormFieldView.h; sourceTree = "<group>"; };
+		DB5C0FD0176E43D600ED3D29 /* FFFormFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFFormFieldView.m; sourceTree = "<group>"; };
+		DB5C0FD2176E65A400ED3D29 /* FFFormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFFormView.h; sourceTree = "<group>"; };
+		DB5C0FD3176E65A400ED3D29 /* FFFormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFFormView.m; sourceTree = "<group>"; };
 		DBB8E1E1176C200600079FDF /* FitFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB8E1E4176C200700079FDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DBB8E1E6176C200700079FDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5C0FCE176E42F700ED3D29 /* QuartzCore.framework in Frameworks */,
 				DBB8E1E5176C200700079FDF /* UIKit.framework in Frameworks */,
 				DBB8E1E7176C200700079FDF /* Foundation.framework in Frameworks */,
 				DBB8E1E9176C200700079FDF /* CoreGraphics.framework in Frameworks */,
@@ -144,6 +156,7 @@
 		DBB8E1E3176C200600079FDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB5C0FCD176E42F700ED3D29 /* QuartzCore.framework */,
 				DBB8E1E4176C200700079FDF /* UIKit.framework */,
 				DBB8E1E6176C200700079FDF /* Foundation.framework */,
 				DBB8E1E8176C200700079FDF /* CoreGraphics.framework */,
@@ -217,6 +230,8 @@
 				DBB8E221176C271300079FDF /* FFLeaderboardViewController.m */,
 				DB5C0FC7176D2E8600ED3D29 /* FFUserDetailViewController.h */,
 				DB5C0FC8176D2E8600ED3D29 /* FFUserDetailViewController.m */,
+				DB5C0FCA176E2DAE00ED3D29 /* FFNewLogViewController.h */,
+				DB5C0FCB176E2DAE00ED3D29 /* FFNewLogViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -239,6 +254,10 @@
 			children = (
 				DBB8E223176C28F500079FDF /* FFUserStatsCell.h */,
 				DBB8E224176C28F500079FDF /* FFUserStatsCell.m */,
+				DB5C0FCF176E43D600ED3D29 /* FFFormFieldView.h */,
+				DB5C0FD0176E43D600ED3D29 /* FFFormFieldView.m */,
+				DB5C0FD2176E65A400ED3D29 /* FFFormView.h */,
+				DB5C0FD3176E65A400ED3D29 /* FFFormView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -424,6 +443,9 @@
 				DB5C0FC3176D1E8000ED3D29 /* FFUser.m in Sources */,
 				DB5C0FC6176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.m in Sources */,
 				DB5C0FC9176D2E8600ED3D29 /* FFUserDetailViewController.m in Sources */,
+				DB5C0FCC176E2DAE00ED3D29 /* FFNewLogViewController.m in Sources */,
+				DB5C0FD1176E43D600ED3D29 /* FFFormFieldView.m in Sources */,
+				DB5C0FD4176E65A400ED3D29 /* FFFormView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
