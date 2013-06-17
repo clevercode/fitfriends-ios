@@ -12,7 +12,7 @@
 #import "FFAPIClient.h"
 #import "FFUserDetailViewController.h"
 #import "FFNewLogViewController.h"
-
+#import "UIBarButtonItem+FFBarButtonItem.h"
 #import <BlocksKit/NSArray+BlocksKit.h>
 #import <ActionSheetPicker/ActionSheetDatePicker.h>
 
@@ -35,12 +35,11 @@ static NSString * const CellIdentifier = @"UserStatsCell";
         // Custom initialization
         self.friends = @[];
         self.title = @"Fit Friends";
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose
-                                                                                               target:self
-                                                                                               action:@selector(onAddAction:)];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"add_log"]
+                                                                                 target:self
+                                                                                 action:@selector(onAddAction:)];
 
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"calendar"]
-                                                                                 style:UIBarButtonItemStyleBordered
                                                                                 target:self
                                                                                 action:@selector(onSelectDateAction:)];
     }

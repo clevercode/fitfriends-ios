@@ -10,6 +10,7 @@
 
 @interface FFAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property(strong, nonatomic) UIWindow *window;
+@property(strong, nonatomic) UIColor *brandRedColor;
 
 @end

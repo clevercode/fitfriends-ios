@@ -15,6 +15,18 @@
 		DB5C0FCE176E42F700ED3D29 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5C0FCD176E42F700ED3D29 /* QuartzCore.framework */; };
 		DB5C0FD1176E43D600ED3D29 /* FFFormFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C0FD0176E43D600ED3D29 /* FFFormFieldView.m */; };
 		DB5C0FD4176E65A400ED3D29 /* FFFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C0FD3176E65A400ED3D29 /* FFFormView.m */; };
+		DB5C0FD9176E710500ED3D29 /* add_log.png in Resources */ = {isa = PBXBuildFile; fileRef = DB5C0FD5176E710500ED3D29 /* add_log.png */; };
+		DB5C0FDA176E710500ED3D29 /* add_log@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB5C0FD6176E710500ED3D29 /* add_log@2x.png */; };
+		DB5C0FDB176E710500ED3D29 /* nav_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = DB5C0FD7176E710500ED3D29 /* nav_bar.png */; };
+		DB5C0FDC176E710500ED3D29 /* nav_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB5C0FD8176E710500ED3D29 /* nav_bar@2x.png */; };
+		DB5C0FE0176E735500ED3D29 /* UIBarButtonItem+FFBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C0FDF176E735500ED3D29 /* UIBarButtonItem+FFBarButtonItem.m */; };
+		DB5C0FE3176E826C00ED3D29 /* UIImage+FFTinting.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C0FE2176E826C00ED3D29 /* UIImage+FFTinting.m */; };
+		DB5C0FEA176E8B4F00ED3D29 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = DB5C0FE4176E8B4F00ED3D29 /* back.png */; };
+		DB5C0FEB176E8B4F00ED3D29 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB5C0FE5176E8B4F00ED3D29 /* back@2x.png */; };
+		DB5C0FEC176E8B4F00ED3D29 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = DB5C0FE6176E8B4F00ED3D29 /* cancel.png */; };
+		DB5C0FED176E8B4F00ED3D29 /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB5C0FE7176E8B4F00ED3D29 /* cancel@2x.png */; };
+		DB5C0FEE176E8B4F00ED3D29 /* done.png in Resources */ = {isa = PBXBuildFile; fileRef = DB5C0FE8176E8B4F00ED3D29 /* done.png */; };
+		DB5C0FEF176E8B4F00ED3D29 /* done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB5C0FE9176E8B4F00ED3D29 /* done@2x.png */; };
 		DBB8E1E5176C200700079FDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB8E1E4176C200700079FDF /* UIKit.framework */; };
 		DBB8E1E7176C200700079FDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB8E1E6176C200700079FDF /* Foundation.framework */; };
 		DBB8E1E9176C200700079FDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB8E1E8176C200700079FDF /* CoreGraphics.framework */; };
@@ -70,6 +82,20 @@
 		DB5C0FD0176E43D600ED3D29 /* FFFormFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFFormFieldView.m; sourceTree = "<group>"; };
 		DB5C0FD2176E65A400ED3D29 /* FFFormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFFormView.h; sourceTree = "<group>"; };
 		DB5C0FD3176E65A400ED3D29 /* FFFormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFFormView.m; sourceTree = "<group>"; };
+		DB5C0FD5176E710500ED3D29 /* add_log.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_log.png; sourceTree = "<group>"; };
+		DB5C0FD6176E710500ED3D29 /* add_log@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_log@2x.png"; sourceTree = "<group>"; };
+		DB5C0FD7176E710500ED3D29 /* nav_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_bar.png; sourceTree = "<group>"; };
+		DB5C0FD8176E710500ED3D29 /* nav_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_bar@2x.png"; sourceTree = "<group>"; };
+		DB5C0FDE176E735500ED3D29 /* UIBarButtonItem+FFBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+FFBarButtonItem.h"; sourceTree = "<group>"; };
+		DB5C0FDF176E735500ED3D29 /* UIBarButtonItem+FFBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+FFBarButtonItem.m"; sourceTree = "<group>"; };
+		DB5C0FE1176E826C00ED3D29 /* UIImage+FFTinting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FFTinting.h"; sourceTree = "<group>"; };
+		DB5C0FE2176E826C00ED3D29 /* UIImage+FFTinting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FFTinting.m"; sourceTree = "<group>"; };
+		DB5C0FE4176E8B4F00ED3D29 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		DB5C0FE5176E8B4F00ED3D29 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		DB5C0FE6176E8B4F00ED3D29 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		DB5C0FE7176E8B4F00ED3D29 /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
+		DB5C0FE8176E8B4F00ED3D29 /* done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = done.png; sourceTree = "<group>"; };
+		DB5C0FE9176E8B4F00ED3D29 /* done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done@2x.png"; sourceTree = "<group>"; };
 		DBB8E1E1176C200600079FDF /* FitFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB8E1E4176C200700079FDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DBB8E1E6176C200700079FDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -133,6 +159,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB5C0FDD176E72BB00ED3D29 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				DB5C0FDE176E735500ED3D29 /* UIBarButtonItem+FFBarButtonItem.h */,
+				DB5C0FDF176E735500ED3D29 /* UIBarButtonItem+FFBarButtonItem.m */,
+				DB5C0FE1176E826C00ED3D29 /* UIImage+FFTinting.h */,
+				DB5C0FE2176E826C00ED3D29 /* UIImage+FFTinting.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
 		DBB8E1D8176C200600079FDF = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +210,7 @@
 				DBB8E229176C396000079FDF /* Resources */,
 				DBB8E1F3176C200700079FDF /* FFAppDelegate.h */,
 				DBB8E1F4176C200700079FDF /* FFAppDelegate.m */,
+				DB5C0FDD176E72BB00ED3D29 /* Lib */,
 				DBB8E1EB176C200700079FDF /* Supporting Files */,
 			);
 			path = FitFriends;
@@ -265,14 +303,24 @@
 		DBB8E229176C396000079FDF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DBB8E22A176C396000079FDF /* Icons */,
+				DBB8E22A176C396000079FDF /* Images */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		DBB8E22A176C396000079FDF /* Icons */ = {
+		DBB8E22A176C396000079FDF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DB5C0FE4176E8B4F00ED3D29 /* back.png */,
+				DB5C0FE5176E8B4F00ED3D29 /* back@2x.png */,
+				DB5C0FE6176E8B4F00ED3D29 /* cancel.png */,
+				DB5C0FE7176E8B4F00ED3D29 /* cancel@2x.png */,
+				DB5C0FE8176E8B4F00ED3D29 /* done.png */,
+				DB5C0FE9176E8B4F00ED3D29 /* done@2x.png */,
+				DB5C0FD5176E710500ED3D29 /* add_log.png */,
+				DB5C0FD6176E710500ED3D29 /* add_log@2x.png */,
+				DB5C0FD7176E710500ED3D29 /* nav_bar.png */,
+				DB5C0FD8176E710500ED3D29 /* nav_bar@2x.png */,
 				DBB8E23D176C513D00079FDF /* calendar.png */,
 				DBB8E23E176C513D00079FDF /* calendar@2x.png */,
 				DBB8E22B176C396000079FDF /* bread.png */,
@@ -282,7 +330,7 @@
 				DBB8E22F176C396000079FDF /* scale.png */,
 				DBB8E230176C396000079FDF /* scale@2x.png */,
 			);
-			path = Icons;
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +421,16 @@
 				DBB8E23A176C4F8400079FDF /* Icon-57@2x.png in Resources */,
 				DBB8E23F176C513D00079FDF /* calendar.png in Resources */,
 				DBB8E240176C513D00079FDF /* calendar@2x.png in Resources */,
+				DB5C0FD9176E710500ED3D29 /* add_log.png in Resources */,
+				DB5C0FDA176E710500ED3D29 /* add_log@2x.png in Resources */,
+				DB5C0FDB176E710500ED3D29 /* nav_bar.png in Resources */,
+				DB5C0FDC176E710500ED3D29 /* nav_bar@2x.png in Resources */,
+				DB5C0FEA176E8B4F00ED3D29 /* back.png in Resources */,
+				DB5C0FEB176E8B4F00ED3D29 /* back@2x.png in Resources */,
+				DB5C0FEC176E8B4F00ED3D29 /* cancel.png in Resources */,
+				DB5C0FED176E8B4F00ED3D29 /* cancel@2x.png in Resources */,
+				DB5C0FEE176E8B4F00ED3D29 /* done.png in Resources */,
+				DB5C0FEF176E8B4F00ED3D29 /* done@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +504,8 @@
 				DB5C0FCC176E2DAE00ED3D29 /* FFNewLogViewController.m in Sources */,
 				DB5C0FD1176E43D600ED3D29 /* FFFormFieldView.m in Sources */,
 				DB5C0FD4176E65A400ED3D29 /* FFFormView.m in Sources */,
+				DB5C0FE0176E735500ED3D29 /* UIBarButtonItem+FFBarButtonItem.m in Sources */,
+				DB5C0FE3176E826C00ED3D29 /* UIImage+FFTinting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

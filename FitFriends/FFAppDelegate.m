@@ -29,10 +29,79 @@
                                                                                                        size:20.f]}];
     UIColor *brandRed = [UIColor colorWithRed:0.8f green:0.067f blue:0.f alpha:1.f];
     [[UINavigationBar appearance] setTintColor:brandRed];
-    [[UISegmentedControl appearance] setTintColor:brandRed];
+    UIImage *navBar = [UIImage imageNamed:@"nav_bar"];
+    navBar = [navBar resizableImageWithCapInsets:UIEdgeInsetsMake(1, 0, 1, 0)];
+    [[UINavigationBar appearance] setBackgroundImage:navBar forBarMetrics:UIBarMetricsDefault];
+
+    // Back Button
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[[UIImage imageNamed:@"back"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 18.f, 0, 0)]
+                                                      forState:UIControlStateNormal
+                                                    barMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(4.f, 0.f)
+                                                         forBarMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundVerticalPositionAdjustment:3.f
+                                                                      forBarMetrics:UIBarMetricsDefault];
+
+    // Segmented Controls
+    [[UISegmentedControl appearance] setTitleTextAttributes:@{UITextAttributeFont: [UIFont fontWithName:@"Avenir-Light" size:18.f],
+                                                              UITextAttributeTextColor: [UIColor blackColor],
+                                                              UITextAttributeTextShadowColor: [UIColor clearColor]}
+                                                   forState:UIControlStateNormal];
+    [[UISegmentedControl appearance] setTitleTextAttributes:@{UITextAttributeTextColor: brandRed}
+                                                   forState:UIControlStateSelected];
+
+    self.brandRedColor = brandRed;
+
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (NSArray *)buttonColors
+{
+    return @[(id)[[UIColor colorWithWhite:1.f alpha:1.0] CGColor],
+             (id)[[UIColor colorWithWhite:0.6f alpha:1.0] CGColor]
+             ];
+}
+
+- (NSArray *)buttonHighlightedColors
+{
+    return @[(id)[[self brandRedColor] CGColor],
+             (id)[[self brandRedColor] CGColor]
+             ];
+}
+
+- (UIImage *)buttonImageHighlighted:(BOOL)highlighted
+{
+    CGSize imageSize = CGSizeMake(21,44); // UIButton metrics
+    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.f);
+    UIBezierPath *roundedRect =
+    [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, imageSize.width, imageSize.height)
+                             cornerRadius:5.f];
+    [roundedRect addClip];
+
+    // Gradient
+    NSArray *colors = highlighted ? [self buttonHighlightedColors] : [self buttonColors];
+    CGContextRef    context = UIGraphicsGetCurrentContext();
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGFloat         locations[] = { 0.0, 1.0 };
+
+    CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)colors, locations);
+    CGContextDrawLinearGradient(context, gradient, CGPointMake(0, 0), CGPointMake(0, 44), kNilOptions);
+
+    // Cleanup
+    CGGradientRelease(gradient);
+    CGColorSpaceRelease(colorSpace);
+
+    // Border
+    [[UIColor whiteColor] setStroke];
+    [roundedRect setLineWidth:2.f];
+    [roundedRect strokeWithBlendMode:kCGBlendModeOverlay alpha:0.33f];
+
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return [image resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

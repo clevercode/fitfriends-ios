@@ -10,4 +10,6 @@
 
 @interface UIImage (FFTinting)
 
+- (UIImage *)tintedImageWithColor:(UIColor *)color;
+
 @end

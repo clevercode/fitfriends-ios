@@ -10,4 +10,14 @@
 
 @implementation UIBarButtonItem (FFBarButtonItem)
 
+- (instancetype)initWithImage:(UIImage *)image target:(id)target action:(SEL)action
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:image forState:UIControlStateNormal];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    button.imageEdgeInsets = UIEdgeInsetsMake(5, 0, 0, 0);
+    button.bounds = CGRectMake(0, 0, image.size.width, image.size.height + 5.f);
+    return [self initWithCustomView:button];
+}
+
 @end

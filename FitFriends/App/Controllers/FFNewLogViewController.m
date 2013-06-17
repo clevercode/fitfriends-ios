@@ -8,6 +8,8 @@
 
 #import "FFNewLogViewController.h"
 #import "FFFormView.h"
+#import "UIImage+FFTinting.h"
+#import "UIBarButtonItem+FFBarButtonItem.h"
 
 @interface FFNewLogViewController ()
 
@@ -26,13 +28,13 @@
         // Custom initialization
         self.title = @"Log Something";
         self.navigationItem.leftBarButtonItem =
-            [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-                                                          target:self
-                                                          action:@selector(onCancelAction:)];
+            [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"cancel"]
+                                            target:self
+                                            action:@selector(onCancelAction:)];
         self.navigationItem.rightBarButtonItem =
-            [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                          target:self
-                                                          action:@selector(onDoneAction:)];
+            [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"done"]
+                                            target:self
+                                            action:@selector(onDoneAction:)];
     }
     return self;
 }
@@ -41,12 +43,11 @@
 {
     UIScrollView *view = [[UIScrollView alloc] init];
     view.backgroundColor = [UIColor whiteColor];
-
-    UISegmentedControl *typeControl = [[UISegmentedControl alloc] initWithItems:@[[UIImage imageNamed:@"water"],
-                                                                                  [UIImage imageNamed:@"bread"],
-                                                                                  [UIImage imageNamed:@"scale"]]];
+    
+    UISegmentedControl *typeControl = [[UISegmentedControl alloc] initWithItems:@[@"Water", @"Food", @"Weight"]];
+    typeControl.segmentedControlStyle = UISegmentedControlStyleBar;
+    typeControl.tintColor = [UIColor whiteColor];
     typeControl.translatesAutoresizingMaskIntoConstraints = NO;
-    typeControl.segmentedControlStyle = UISegmentedControlStylePlain;
     typeControl.selectedSegmentIndex = 0;
     [typeControl addTarget:self
                     action:@selector(onTypeChangeAction:)
