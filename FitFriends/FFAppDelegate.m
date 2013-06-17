@@ -15,7 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Hockey App
-    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"cbf0dffd40de624ae36e9e77e70006b5"
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"6a84a91df13c8baeab189946f5cfe39e"
                                                            delegate:self];
     [[BITHockeyManager sharedHockeyManager] startManager];
 
