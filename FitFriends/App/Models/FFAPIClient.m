@@ -10,6 +10,8 @@
 #import <AFNetworking/AFJSONRequestOperation.h>
 
 NSString * const kFFAPIBaseURLString = @"https://fitfriends.herokuapp.com/";
+//NSString * const kFFAPIBaseURLString = @"http://pentos.local:3000/";
+
 
 @implementation FFAPIClient
 
