@@ -10,6 +10,7 @@
 
 @interface FFFormFieldView : UIView
 
+@property(nonatomic, copy) NSString *name;
 @property(nonatomic, strong) UILabel *label;
 @property(nonatomic, strong) UITextField *textField;
 

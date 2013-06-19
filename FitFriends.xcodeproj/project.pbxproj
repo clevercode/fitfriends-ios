@@ -54,6 +54,9 @@
 		DBB8E23F176C513D00079FDF /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E23D176C513D00079FDF /* calendar.png */; };
 		DBB8E240176C513D00079FDF /* calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8E23E176C513D00079FDF /* calendar@2x.png */; };
 		DBC839A1176D1B7800904DDE /* FFAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC839A0176D1B7800904DDE /* FFAPIClient.m */; };
+		DBE31300176FEF5200DFC916 /* FFWaterLog.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE312FF176FEF5200DFC916 /* FFWaterLog.m */; };
+		DBE31303176FF41B00DFC916 /* FFWeightLog.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE31302176FF41B00DFC916 /* FFWeightLog.m */; };
+		DBE31306176FF71800DFC916 /* FFFoodLog.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE31305176FF71800DFC916 /* FFFoodLog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +74,8 @@
 		AB0D3F5F09B04D82933709A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5C0FC1176D1E8000ED3D29 /* FFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUser.h; sourceTree = "<group>"; };
 		DB5C0FC2176D1E8000ED3D29 /* FFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUser.m; sourceTree = "<group>"; };
-		DB5C0FC4176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNSDecimalNumberValueTransformer.h; sourceTree = "<group>"; };
-		DB5C0FC5176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNSDecimalNumberValueTransformer.m; sourceTree = "<group>"; };
+		DB5C0FC4176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFNSDecimalNumberValueTransformer.h; path = Models/FFNSDecimalNumberValueTransformer.h; sourceTree = "<group>"; };
+		DB5C0FC5176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FFNSDecimalNumberValueTransformer.m; path = Models/FFNSDecimalNumberValueTransformer.m; sourceTree = "<group>"; };
 		DB5C0FC7176D2E8600ED3D29 /* FFUserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUserDetailViewController.h; sourceTree = "<group>"; };
 		DB5C0FC8176D2E8600ED3D29 /* FFUserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUserDetailViewController.m; sourceTree = "<group>"; };
 		DB5C0FCA176E2DAE00ED3D29 /* FFNewLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNewLogViewController.h; sourceTree = "<group>"; };
@@ -131,6 +134,12 @@
 		DBB8E23E176C513D00079FDF /* calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar@2x.png"; sourceTree = "<group>"; };
 		DBC8399F176D1B7800904DDE /* FFAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAPIClient.h; sourceTree = "<group>"; };
 		DBC839A0176D1B7800904DDE /* FFAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAPIClient.m; sourceTree = "<group>"; };
+		DBE312FE176FEF5200DFC916 /* FFWaterLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFWaterLog.h; sourceTree = "<group>"; };
+		DBE312FF176FEF5200DFC916 /* FFWaterLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFWaterLog.m; sourceTree = "<group>"; };
+		DBE31301176FF41B00DFC916 /* FFWeightLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFWeightLog.h; sourceTree = "<group>"; };
+		DBE31302176FF41B00DFC916 /* FFWeightLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFWeightLog.m; sourceTree = "<group>"; };
+		DBE31304176FF71800DFC916 /* FFFoodLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFFoodLog.h; sourceTree = "<group>"; };
+		DBE31305176FF71800DFC916 /* FFFoodLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFFoodLog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +265,7 @@
 			children = (
 				DBB8E21D176C269400079FDF /* Controllers */,
 				DBB8E21E176C269400079FDF /* Models */,
+				DBE31307176FFA2A00DFC916 /* Value Transformers */,
 				DBB8E21F176C269400079FDF /* Views */,
 			);
 			path = App;
@@ -279,10 +289,14 @@
 			children = (
 				DBC8399F176D1B7800904DDE /* FFAPIClient.h */,
 				DBC839A0176D1B7800904DDE /* FFAPIClient.m */,
+				DBE31304176FF71800DFC916 /* FFFoodLog.h */,
+				DBE31305176FF71800DFC916 /* FFFoodLog.m */,
 				DB5C0FC1176D1E8000ED3D29 /* FFUser.h */,
 				DB5C0FC2176D1E8000ED3D29 /* FFUser.m */,
-				DB5C0FC4176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.h */,
-				DB5C0FC5176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.m */,
+				DBE312FE176FEF5200DFC916 /* FFWaterLog.h */,
+				DBE312FF176FEF5200DFC916 /* FFWaterLog.m */,
+				DBE31301176FF41B00DFC916 /* FFWeightLog.h */,
+				DBE31302176FF41B00DFC916 /* FFWeightLog.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -331,6 +345,15 @@
 				DBB8E230176C396000079FDF /* scale@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		DBE31307176FFA2A00DFC916 /* Value Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				DB5C0FC4176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.h */,
+				DB5C0FC5176D224800ED3D29 /* FFNSDecimalNumberValueTransformer.m */,
+			);
+			name = "Value Transformers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,6 +529,9 @@
 				DB5C0FD4176E65A400ED3D29 /* FFFormView.m in Sources */,
 				DB5C0FE0176E735500ED3D29 /* UIBarButtonItem+FFBarButtonItem.m in Sources */,
 				DB5C0FE3176E826C00ED3D29 /* UIImage+FFTinting.m in Sources */,
+				DBE31300176FEF5200DFC916 /* FFWaterLog.m in Sources */,
+				DBE31303176FF41B00DFC916 /* FFWeightLog.m in Sources */,
+				DBE31306176FF71800DFC916 /* FFFoodLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +635,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6330A313889F4815BFF243A1 /* Pods.xcconfig */;
 			buildSettings = {
+				BUNDLE_ID = net.clevercode.FitFriends.dev;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FitFriends/FitFriends-Prefix.pch";
 				INFOPLIST_FILE = "FitFriends/FitFriends-Info.plist";
@@ -621,6 +648,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6330A313889F4815BFF243A1 /* Pods.xcconfig */;
 			buildSettings = {
+				BUNDLE_ID = net.clevercode.FitFriends;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FitFriends/FitFriends-Prefix.pch";
 				INFOPLIST_FILE = "FitFriends/FitFriends-Info.plist";

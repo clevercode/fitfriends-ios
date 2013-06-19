@@ -50,6 +50,9 @@
     [[UISegmentedControl appearance] setTitleTextAttributes:@{UITextAttributeTextColor: brandRed}
                                                    forState:UIControlStateSelected];
 
+    // Refresh Control
+    [[UIRefreshControl appearance] setTintColor:brandRed];
+
     self.brandRedColor = brandRed;
 
     self.window.rootViewController = navigationController;

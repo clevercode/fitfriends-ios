@@ -26,8 +26,9 @@
     return self;
 }
 
-- (void)addField:(FFFormFieldView *)field
+- (void)addField:(FFFormFieldView *)field named:(NSString *)name
 {
+    field.name = name;
     [self addSubview:field];
     [_fields addObject:field];
 }
@@ -35,6 +36,18 @@
 - (NSArray *)fields
 {
     return [_fields copy];
+}
+
+- (NSDictionary *)collectValues
+{
+    NSMutableDictionary *valuesDictionary;
+    valuesDictionary = [[NSMutableDictionary alloc] initWithCapacity:[_fields count]];
+    for (FFFormFieldView *field in _fields)
+    {
+        valuesDictionary[field.name] = field.textField.text;
+    }
+
+    return valuesDictionary;
 }
 
 @end

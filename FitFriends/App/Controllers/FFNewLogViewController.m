@@ -8,14 +8,17 @@
 
 #import "FFNewLogViewController.h"
 #import "FFFormView.h"
+#import "FFAPIClient.h"
 #import "UIImage+FFTinting.h"
 #import "UIBarButtonItem+FFBarButtonItem.h"
+#import <BlocksKit/UIAlertView+BlocksKit.h>
 
 @interface FFNewLogViewController ()
 
 @property(nonatomic, strong) FFFormView *waterForm;
 @property(nonatomic, strong) FFFormView *foodForm;
 @property(nonatomic, strong) FFFormView *weightForm;
+@property(nonatomic, strong) UISegmentedControl *typeControl;
 
 @end
 
@@ -52,7 +55,7 @@
     [typeControl addTarget:self
                     action:@selector(onTypeChangeAction:)
           forControlEvents:UIControlEventValueChanged];
-
+    self.typeControl = typeControl;
     [view addSubview:typeControl];
 
     FFFormView *waterForm = [self makeWaterForm];
@@ -167,7 +170,7 @@
     FFFormFieldView *waterVolumeField = [[FFFormFieldView alloc] init];
     waterVolumeField.label.text = @"fl oz";
     waterVolumeField.textField.placeholder = @"0.0";
-    [waterForm addField:waterVolumeField];
+    [waterForm addField:waterVolumeField named:@"volume"];
     [waterVolumeField pinToSuperviewEdgesWithInset:UIEdgeInsetsZero];
 
     return waterForm;
@@ -181,22 +184,22 @@
     FFFormFieldView *name = [[FFFormFieldView alloc] init];
     name.label.text = @"name";
     name.textField.keyboardType = UIKeyboardTypeASCIICapable;
-    [foodForm addField:name];
+    [foodForm addField:name named:@"food_name"];
 
     FFFormFieldView *fat = [[FFFormFieldView alloc] init];
     fat.label.text = @"fat";
     fat.textField.placeholder = @"0.0";
-    [foodForm addField:fat];
+    [foodForm addField:fat named:@"fat"];
 
     FFFormFieldView *carbs = [[FFFormFieldView alloc] init];
     carbs.label.text = @"carbs";
     carbs.textField.placeholder = @"0.0";
-    [foodForm addField:carbs];
+    [foodForm addField:carbs named:@"carbs"];
 
     FFFormFieldView *protein = [[FFFormFieldView alloc] init];
     protein.label.text = @"protein";
     protein.textField.placeholder = @"0.0";
-    [foodForm addField:protein];
+    [foodForm addField:protein named:@"protein"];
 
     NSDictionary *views = NSDictionaryOfVariableBindings(name,
                                                          fat,
@@ -225,7 +228,7 @@
     FFFormFieldView *weight = [[FFFormFieldView alloc] init];
     weight.label.text = @"lbs";
     weight.textField.placeholder = @"0.0";
-    [weightForm addField:weight];
+    [weightForm addField:weight named:@"weight"];
     [weight pinToSuperviewEdgesWithInset:UIEdgeInsetsZero];
 
     return weightForm;
@@ -271,6 +274,47 @@
 
 - (void)onDoneAction:(id)sender
 {
+    FFFormView *form = [self formForSegmentIndex:[_typeControl selectedSegmentIndex]];
+    NSMutableDictionary *values = [[form collectValues] mutableCopy];
+    NSDate *date = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss'Z'";
+    formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    formatter.timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
+    values[@"consumed_at"] = [formatter stringFromDate:date];
+    NSString *userId = @"1";
+    NSString *path;
+    NSString *key;
+    switch ([_typeControl selectedSegmentIndex]) {
+        case 0:
+            path = @"users/%@/water_logs";
+            key = @"water_log";
+            break;
+        case 1:
+            path = @"users/%@/food_logs";
+            key = @"food_log";
+            break;
+        case 2:
+            path = @"users/%@/weight_logs";
+            key = @"weight_log";
+            break;
+        default:
+            break;
+    }
+
+    [[FFAPIClient sharedClient] postPath:[NSString stringWithFormat:path, userId]
+                              parameters:@{ key : values }
+                                 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                     [self dismissViewControllerAnimated:YES completion:nil];
+                                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                     NSLog(@"!!! Could not save log: %@, error: %@", values, error);
+                                     [UIAlertView showAlertViewWithTitle:@"API Error"
+                                                                 message:@"Refused to save your log entry"
+                                                       cancelButtonTitle:@"Alright"
+                                                       otherButtonTitles:nil
+                                                                 handler:nil];
+                                 }];
+
 }
 
 - (void)onTypeChangeAction:(UISegmentedControl *)sender

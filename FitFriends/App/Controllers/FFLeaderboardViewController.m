@@ -52,7 +52,11 @@ static NSString * const CellIdentifier = @"UserStatsCell";
     self.tableView.rowHeight = 90.f;
     [self.tableView registerClass:[FFUserStatsCell class]
            forCellReuseIdentifier:CellIdentifier];
-	// Do any additional setup after loading the view.
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self
+                       action:@selector(onRefreshAction:)
+             forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -68,6 +72,7 @@ static NSString * const CellIdentifier = @"UserStatsCell";
 
 - (void)loadData
 {
+    [self.refreshControl beginRefreshing];
     [[FFAPIClient sharedClient] getPath:@"users"
                              parameters:nil
                                 success:^(AFHTTPRequestOperation *operation, NSArray *users) {
@@ -77,13 +82,15 @@ static NSString * const CellIdentifier = @"UserStatsCell";
                                                                       error:NULL];
                                     }];
                                     [self.tableView reloadData];
+                                    [self.refreshControl endRefreshing];
                                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"API Error"
                                                                                     message:error.userInfo[NSLocalizedDescriptionKey]
                                                                                    delegate:nil
-                                                                          cancelButtonTitle:nil
+                                                                          cancelButtonTitle:@"Darn"
                                                                           otherButtonTitles:nil];
                                     [alert show];
+                                    [self.refreshControl endRefreshing];
                                 }];
 }
 
@@ -111,6 +118,11 @@ static NSString * const CellIdentifier = @"UserStatsCell";
 - (void)onPickDate:(id)sender
 {
     
+}
+
+- (void)onRefreshAction:(id)sender
+{
+    [self loadData];
 }
 
 #pragma mark - UITableViewDataSource protocol methods

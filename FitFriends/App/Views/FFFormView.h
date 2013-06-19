@@ -12,6 +12,7 @@
 @interface FFFormView : UIView
 
 - (NSArray *)fields;
-- (void)addField:(FFFormFieldView *)field;
+- (void)addField:(FFFormFieldView *)field named:(NSString *)name;
+- (NSDictionary *)collectValues;
 
 @end
