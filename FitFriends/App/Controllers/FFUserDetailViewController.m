@@ -8,10 +8,14 @@
 
 #import "FFUserDetailViewController.h"
 #import <KHGravatar/UIImageView+KHGravatar.h>
+#import <BlocksKit/UIActionSheet+BlocksKit.h>
+
+NSString * const FFUserIdUserDefaultsKey = @"ffUserId";
 
 @interface FFUserDetailViewController ()
 
 @property(nonatomic, strong) UIImageView *avatar;
+@property(nonatomic, strong) UIButton *meButton;
 
 @end
 
@@ -52,6 +56,20 @@
                                      size:24.f];
     [view addSubview:nameLabel];
 
+    UIButton *meButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    meButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [meButton setTitle:@"Set this user as me"
+              forState:UIControlStateNormal];
+    [meButton setTitle:@"This user is you"
+              forState:UIControlStateDisabled];
+    [meButton addTarget:self
+                 action:@selector(onMeButtonAction:)
+       forControlEvents:UIControlEventTouchUpInside];
+    [view addSubview:meButton];
+    [meButton pinToSuperviewEdges:JRTViewPinBottomEdge|JRTViewPinLeftEdge|JRTViewPinRightEdge
+                            inset:20.f];
+    self.meButton = meButton;
+
     NSDictionary *views = NSDictionaryOfVariableBindings(avatar,
                                                          nameLabel);
 
@@ -66,13 +84,15 @@
                                              metrics:nil
                                                views:views]];
 
+
     self.view = view;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	NSInteger currentUserId = [[NSUserDefaults standardUserDefaults] integerForKey:FFUserIdUserDefaultsKey];
+    _meButton.enabled = !(currentUserId && _user.identifier == currentUserId);
 }
 
 - (void)viewDidLayoutSubviews
@@ -89,6 +109,26 @@
 - (NSString *)title
 {
     return self.user.name;
+}
+
+#pragma mark - Actions
+
+- (void)onMeButtonAction:(UIButton *)sender
+{
+
+    UIActionSheet *actionSheet = [UIActionSheet actionSheetWithTitle:@"Are you sure this is you?"];
+    [actionSheet addButtonWithTitle:@"Yes, its me."
+                            handler:^{
+                                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                                [defaults setInteger:self.user.identifier
+                                              forKey:FFUserIdUserDefaultsKey];
+                                [defaults synchronize];
+                                [sender setEnabled:NO];
+                            }];
+    [actionSheet addButtonWithTitle:@"Nope."];
+    [actionSheet showFromRect:[sender frame]
+                       inView:self.view
+                     animated:YES];
 }
 
 @end

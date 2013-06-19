@@ -282,20 +282,20 @@
     formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
     formatter.timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
     values[@"consumed_at"] = [formatter stringFromDate:date];
-    NSString *userId = @"1";
+    NSInteger userId = [[NSUserDefaults standardUserDefaults] integerForKey:@"ffUserId"];
     NSString *path;
     NSString *key;
     switch ([_typeControl selectedSegmentIndex]) {
         case 0:
-            path = @"users/%@/water_logs";
+            path = @"users/%d/water_logs";
             key = @"water_log";
             break;
         case 1:
-            path = @"users/%@/food_logs";
+            path = @"users/%d/food_logs";
             key = @"food_log";
             break;
         case 2:
-            path = @"users/%@/weight_logs";
+            path = @"users/%d/weight_logs";
             key = @"weight_log";
             break;
         default:

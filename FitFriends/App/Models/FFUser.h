@@ -10,6 +10,7 @@
 
 @interface FFUser : MTLModel <MTLJSONSerializing>
 
+@property(nonatomic, assign, readonly) NSUInteger identifier;
 @property(nonatomic, copy, readonly) NSString *name;
 @property(nonatomic, copy, readonly) NSString *email;
 @property(nonatomic, copy, readonly) NSDecimalNumber *startWeight;

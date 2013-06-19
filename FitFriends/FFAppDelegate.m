@@ -53,6 +53,9 @@
     // Refresh Control
     [[UIRefreshControl appearance] setTintColor:brandRed];
 
+    // Buttons
+    [[UIButton appearance] setTintColor:brandRed];
+
     self.brandRedColor = brandRed;
 
     self.window.rootViewController = navigationController;

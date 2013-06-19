@@ -14,6 +14,7 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
     return @{
+        @"identifier": @"id",
         @"startWeight": @"start_weight",
         @"goalWeight": @"goal_weight",
         @"currentWeight": @"current_weight",
