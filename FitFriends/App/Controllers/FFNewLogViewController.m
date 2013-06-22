@@ -272,8 +272,9 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)onDoneAction:(id)sender
+- (void)onDoneAction:(UIBarButtonItem *)sender
 {
+    sender.enabled = NO;
     FFFormView *form = [self formForSegmentIndex:[_typeControl selectedSegmentIndex]];
     NSMutableDictionary *values = [[form collectValues] mutableCopy];
     NSDate *date = [NSDate date];
@@ -313,6 +314,7 @@
                                                        cancelButtonTitle:@"Alright"
                                                        otherButtonTitles:nil
                                                                  handler:nil];
+                                     sender.enabled = YES;
                                  }];
 
 }

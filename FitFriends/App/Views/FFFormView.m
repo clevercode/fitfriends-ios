@@ -44,7 +44,16 @@
     valuesDictionary = [[NSMutableDictionary alloc] initWithCapacity:[_fields count]];
     for (FFFormFieldView *field in _fields)
     {
-        valuesDictionary[field.name] = field.textField.text;
+        NSString *value;
+        if (field.textField.text.length > 0)
+        {
+            value = field.textField.text;
+        }
+        else if (field.textField.placeholder.length > 0)
+        {
+            value = field.textField.placeholder;
+        }
+        valuesDictionary[field.name] = value;
     }
 
     return valuesDictionary;
