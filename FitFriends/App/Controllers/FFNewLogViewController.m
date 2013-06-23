@@ -79,10 +79,18 @@
                                                          weightForm);
 
     [view addConstraints:
-     [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[typeControl(280)]-|"
+     [NSLayoutConstraint constraintsWithVisualFormat:@"H:[typeControl(280)]"
                                              options:kNilOptions
                                              metrics:nil
                                                views:views]];
+    [view addConstraint:
+     [NSLayoutConstraint constraintWithItem:typeControl
+                                  attribute:NSLayoutAttributeCenterX
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:view
+                                  attribute:NSLayoutAttributeCenterX
+                                 multiplier:1.f
+                                   constant:0.f]];
 
     [view addConstraints:
      [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[typeControl]-(40)-[foodForm]-|"
