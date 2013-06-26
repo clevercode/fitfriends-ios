@@ -178,7 +178,7 @@
     FFFormFieldView *waterVolumeField = [[FFFormFieldView alloc] init];
     waterVolumeField.label.text = @"fl oz";
     waterVolumeField.textField.placeholder = @"0.0";
-    [waterForm addField:waterVolumeField named:@"volume"];
+    [waterForm addField:waterVolumeField named:@"volume_in_ounces"];
     [waterVolumeField pinToSuperviewEdgesWithInset:UIEdgeInsetsZero];
 
     return waterForm;
@@ -236,7 +236,7 @@
     FFFormFieldView *weight = [[FFFormFieldView alloc] init];
     weight.label.text = @"lbs";
     weight.textField.placeholder = @"0.0";
-    [weightForm addField:weight named:@"weight"];
+    [weightForm addField:weight named:@"weight_in_lbs"];
     [weight pinToSuperviewEdgesWithInset:UIEdgeInsetsZero];
 
     return weightForm;
@@ -291,6 +291,7 @@
     formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
     formatter.timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
     values[@"consumed_at"] = [formatter stringFromDate:date];
+    values[@"measured_at"] = [formatter stringFromDate:date];
     NSInteger userId = [[NSUserDefaults standardUserDefaults] integerForKey:@"ffUserId"];
     NSString *path;
     NSString *key;
