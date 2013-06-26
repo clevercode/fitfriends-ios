@@ -11,6 +11,17 @@
 
 @implementation FFUser
 
+- (NSInteger)todaysWaterInOunces
+{
+    NSDecimalNumber *ml = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%d",self.todaysWater]];
+    NSDecimalNumber *conversion = [NSDecimalNumber decimalNumberWithString:@"0.033814"];
+    NSDecimalNumber *ounces = [ml decimalNumberByMultiplyingBy:conversion];
+    ounces = [ounces decimalNumberByRoundingAccordingToBehavior:nil];
+    return [ounces integerValue];
+}
+
+#pragma mark - MTLJSONSerializing protocol methods
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
     return @{

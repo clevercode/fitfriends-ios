@@ -21,4 +21,6 @@
 @property(nonatomic, copy, readonly) NSDecimalNumber *todaysCarbs;
 @property(nonatomic, assign, readonly) NSUInteger todaysWater;
 
+
+- (NSInteger)todaysWaterInOunces;
 @end
