@@ -13,7 +13,7 @@
 #import "FFUserDetailViewController.h"
 #import "FFNewLogViewController.h"
 #import "UIBarButtonItem+FFBarButtonItem.h"
-#import <BlocksKit/NSArray+BlocksKit.h>
+#import <BlocksKit/BlocksKit.h>
 #import <ActionSheetPicker/ActionSheetDatePicker.h>
 
 static NSString * const CellIdentifier = @"UserStatsCell";
@@ -98,6 +98,16 @@ static NSString * const CellIdentifier = @"UserStatsCell";
 
 - (void)onAddAction:(id)sender
 {
+    NSInteger userId = [[NSUserDefaults standardUserDefaults] integerForKey:@"ffUserId"];
+    if (!userId)
+    {
+        [UIAlertView showAlertViewWithTitle:@"Who are you?"
+                                    message:@"Sign in to continue."
+                          cancelButtonTitle:@"Okay"
+                          otherButtonTitles:nil
+                                    handler:nil];
+        return;
+    }
     FFNewLogViewController *newLogViewController = [[FFNewLogViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:newLogViewController];
     [self presentViewController:navigationController
