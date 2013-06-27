@@ -99,7 +99,7 @@
 		DB5C0FE7176E8B4F00ED3D29 /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
 		DB5C0FE8176E8B4F00ED3D29 /* done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = done.png; sourceTree = "<group>"; };
 		DB5C0FE9176E8B4F00ED3D29 /* done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done@2x.png"; sourceTree = "<group>"; };
-		DBB8E1E1176C200600079FDF /* FitFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBB8E1E1176C200600079FDF /* Fit Friends (dv).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fit Friends (dv).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB8E1E4176C200700079FDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DBB8E1E6176C200700079FDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DBB8E1E8176C200700079FDF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -193,7 +193,7 @@
 		DBB8E1E2176C200600079FDF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DBB8E1E1176C200600079FDF /* FitFriends.app */,
+				DBB8E1E1176C200600079FDF /* Fit Friends (dv).app */,
 				DBB8E201176C200700079FDF /* FitFriendsTests.octest */,
 			);
 			name = Products;
@@ -375,7 +375,7 @@
 			);
 			name = FitFriends;
 			productName = FitFriends;
-			productReference = DBB8E1E1176C200600079FDF /* FitFriends.app */;
+			productReference = DBB8E1E1176C200600079FDF /* Fit Friends (dv).app */;
 			productType = "com.apple.product-type.application";
 		};
 		DBB8E200176C200700079FDF /* FitFriendsTests */ = {
@@ -639,7 +639,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FitFriends/FitFriends-Prefix.pch";
 				INFOPLIST_FILE = "FitFriends/FitFriends-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Fit Friends (dv)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -652,7 +652,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FitFriends/FitFriends-Prefix.pch";
 				INFOPLIST_FILE = "FitFriends/FitFriends-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Fit Friends";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
