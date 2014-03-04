@@ -35,11 +35,11 @@ static NSString * const CellIdentifier = @"UserStatsCell";
         // Custom initialization
         self.friends = @[];
         self.title = @"Fit Friends";
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"add_log"]
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                                  target:self
                                                                                  action:@selector(onAddAction:)];
 
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"calendar"]
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize
                                                                                 target:self
                                                                                 action:@selector(onSelectDateAction:)];
     }
@@ -117,12 +117,13 @@ static NSString * const CellIdentifier = @"UserStatsCell";
 
 - (void)onSelectDateAction:(id)sender
 {
-    [ActionSheetDatePicker showPickerWithTitle:@"Select a day"
+    id picker = [ActionSheetDatePicker showPickerWithTitle:@"Select a day"
                                 datePickerMode:UIDatePickerModeDate
                                   selectedDate:[NSDate date]
                                         target:self
                                         action:@selector(onPickDate:)
                                         origin:self.view];
+    [[picker pickerView] setTintColor:self.view.window.tintColor];
 }
 
 - (void)onPickDate:(id)sender

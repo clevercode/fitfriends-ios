@@ -15,6 +15,7 @@ NSString * const FFUserIdUserDefaultsKey = @"ffUserId";
 @interface FFUserDetailViewController ()
 
 @property(nonatomic, strong) UIImageView *avatar;
+@property(nonatomic, strong) UILabel *nameLabel;
 @property(nonatomic, strong) UIButton *meButton;
 
 @end
@@ -32,8 +33,8 @@ NSString * const FFUserIdUserDefaultsKey = @"ffUserId";
 
 - (void)loadView
 {
-    UIView *view = [[UIView alloc] init];
-
+    UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
+    view.backgroundColor = [UIColor whiteColor];
     UIImageView *avatar = [[UIImageView alloc] init];
     avatar.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -54,6 +55,7 @@ NSString * const FFUserIdUserDefaultsKey = @"ffUserId";
     nameLabel.text = self.user.name;
     nameLabel.font = [UIFont fontWithName:@"Avenir-Light"
                                      size:24.f];
+    self.nameLabel = nameLabel;
     [view addSubview:nameLabel];
 
     UIButton *meButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -70,19 +72,7 @@ NSString * const FFUserIdUserDefaultsKey = @"ffUserId";
                             inset:20.f];
     self.meButton = meButton;
 
-    NSDictionary *views = NSDictionaryOfVariableBindings(avatar,
-                                                         nameLabel);
 
-    [view addConstraints:
-     [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[avatar]"
-                                             options:kNilOptions
-                                             metrics:nil
-                                               views:views]];
-    [view addConstraints:
-     [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[avatar(100)]-(20)-[nameLabel]-|"
-                                             options:NSLayoutFormatAlignAllCenterY
-                                             metrics:nil
-                                               views:views]];
 
 
     self.view = view;
@@ -93,6 +83,25 @@ NSString * const FFUserIdUserDefaultsKey = @"ffUserId";
     [super viewDidLoad];
 	NSInteger currentUserId = [[NSUserDefaults standardUserDefaults] integerForKey:FFUserIdUserDefaultsKey];
     _meButton.enabled = !(currentUserId && _user.identifier == currentUserId);
+
+
+    UIView *avatar = self.avatar;
+    UIView *nameLabel = self.nameLabel;
+    id topLayoutGuide = self.topLayoutGuide;
+    NSDictionary *views = NSDictionaryOfVariableBindings(avatar,
+                                                         nameLabel,
+                                                         topLayoutGuide);
+
+    [self.view addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide]-[avatar]"
+                                             options:kNilOptions
+                                             metrics:nil
+                                               views:views]];
+    [self.view addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[avatar(100)]-(20)-[nameLabel]-|"
+                                             options:NSLayoutFormatAlignAllCenterY
+                                             metrics:nil
+                                               views:views]];
 }
 
 - (void)viewDidLayoutSubviews

@@ -14,100 +14,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Hockey App
-    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"6a84a91df13c8baeab189946f5cfe39e"
-                                                           delegate:self];
-    [[BITHockeyManager sharedHockeyManager] startManager];
+    // Hockey App [[BIockeyManager sharedHockeyManager]
+    //configureWithIdentifier:@"6a84a91df13c8baeab189946f5cfe39e"
+    //                                                       delegate:self];
+    //[[BITHockeyManager sharedHockeyManager] startManager];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
 
+
     FFLeaderboardViewController *rootViewController = [[FFLeaderboardViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeFont: [UIFont fontWithName:@"Avenir-Black"
-                                                                                                       size:20.f]}];
     UIColor *brandRed = [UIColor colorWithRed:0.8f green:0.067f blue:0.f alpha:1.f];
-    [[UINavigationBar appearance] setTintColor:brandRed];
-    UIImage *navBar = [UIImage imageNamed:@"nav_bar"];
-    navBar = [navBar resizableImageWithCapInsets:UIEdgeInsetsMake(1, 0, 1, 0)];
-    [[UINavigationBar appearance] setBackgroundImage:navBar forBarMetrics:UIBarMetricsDefault];
-
-    // Back Button
-    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[[UIImage imageNamed:@"back"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 18.f, 0, 0)]
-                                                      forState:UIControlStateNormal
-                                                    barMetrics:UIBarMetricsDefault];
-    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(4.f, 0.f)
-                                                         forBarMetrics:UIBarMetricsDefault];
-    [[UIBarButtonItem appearance] setBackButtonBackgroundVerticalPositionAdjustment:3.f
-                                                                      forBarMetrics:UIBarMetricsDefault];
-
-    // Segmented Controls
-    [[UISegmentedControl appearance] setTitleTextAttributes:@{UITextAttributeFont: [UIFont fontWithName:@"Avenir-Light" size:18.f],
-                                                              UITextAttributeTextColor: [UIColor blackColor],
-                                                              UITextAttributeTextShadowColor: [UIColor clearColor]}
-                                                   forState:UIControlStateNormal];
-    [[UISegmentedControl appearance] setTitleTextAttributes:@{UITextAttributeTextColor: brandRed}
-                                                   forState:UIControlStateSelected];
-
-    // Refresh Control
-    [[UIRefreshControl appearance] setTintColor:brandRed];
-
-    // Buttons
-    [[UIButton appearance] setTintColor:brandRed];
-
     self.brandRedColor = brandRed;
-
+    //[[UINavigationBar appearance] setBarTintColor:brandRed];
+    //[[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    self.window.tintColor = brandRed;
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
-}
-
-- (NSArray *)buttonColors
-{
-    return @[(id)[[UIColor colorWithWhite:1.f alpha:1.0] CGColor],
-             (id)[[UIColor colorWithWhite:0.6f alpha:1.0] CGColor]
-             ];
-}
-
-- (NSArray *)buttonHighlightedColors
-{
-    return @[(id)[[self brandRedColor] CGColor],
-             (id)[[self brandRedColor] CGColor]
-             ];
-}
-
-- (UIImage *)buttonImageHighlighted:(BOOL)highlighted
-{
-    CGSize imageSize = CGSizeMake(21,44); // UIButton metrics
-    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.f);
-    UIBezierPath *roundedRect =
-    [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, imageSize.width, imageSize.height)
-                             cornerRadius:5.f];
-    [roundedRect addClip];
-
-    // Gradient
-    NSArray *colors = highlighted ? [self buttonHighlightedColors] : [self buttonColors];
-    CGContextRef    context = UIGraphicsGetCurrentContext();
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGFloat         locations[] = { 0.0, 1.0 };
-
-    CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)colors, locations);
-    CGContextDrawLinearGradient(context, gradient, CGPointMake(0, 0), CGPointMake(0, 44), kNilOptions);
-
-    // Cleanup
-    CGGradientRelease(gradient);
-    CGColorSpaceRelease(colorSpace);
-
-    // Border
-    [[UIColor whiteColor] setStroke];
-    [roundedRect setLineWidth:2.f];
-    [roundedRect strokeWithBlendMode:kCGBlendModeOverlay alpha:0.33f];
-
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return [image resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

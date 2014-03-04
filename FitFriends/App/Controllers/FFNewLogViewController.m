@@ -31,11 +31,11 @@
         // Custom initialization
         self.title = @"Log Something";
         self.navigationItem.leftBarButtonItem =
-            [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"cancel"]
+        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
                                             target:self
                                             action:@selector(onCancelAction:)];
         self.navigationItem.rightBarButtonItem =
-            [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"done"]
+            [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                             target:self
                                             action:@selector(onDoneAction:)];
     }
@@ -48,8 +48,6 @@
     view.backgroundColor = [UIColor whiteColor];
     
     UISegmentedControl *typeControl = [[UISegmentedControl alloc] initWithItems:@[@"Water", @"Food", @"Weight"]];
-    typeControl.segmentedControlStyle = UISegmentedControlStyleBar;
-    typeControl.tintColor = [UIColor whiteColor];
     typeControl.translatesAutoresizingMaskIntoConstraints = NO;
     typeControl.selectedSegmentIndex = 0;
     [typeControl addTarget:self
@@ -93,7 +91,7 @@
                                    constant:0.f]];
 
     [view addConstraints:
-     [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[typeControl]-(40)-[foodForm]-|"
+     [NSLayoutConstraint constraintsWithVisualFormat:@"V:[typeControl]-(40)-[foodForm]-|"
                                              options:NSLayoutFormatAlignAllLeft|NSLayoutFormatAlignAllRight
                                              metrics:nil
                                                views:views]];
@@ -123,6 +121,15 @@
                                              selector:@selector(onKeyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
+
+    [self.view addConstraint:
+     [NSLayoutConstraint constraintWithItem:self.typeControl
+                                  attribute:NSLayoutAttributeTop
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:self.topLayoutGuide
+                                  attribute:NSLayoutAttributeBottom
+                                 multiplier:1.f
+                                   constant:20.f]];
 }
 
 - (void)viewDidAppear:(BOOL)animated
